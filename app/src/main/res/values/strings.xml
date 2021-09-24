@@ -8,4 +8,5 @@
     <string name="amazing_20">Amazing (20%)</string>
     <string name="how_was_the_service">How was the service?</string>
     <string name="cost_of_service">Cost of Service</string>
+    <string name="snackbar">Cost is empty. Please input a valid amount.</string>
 </resources>

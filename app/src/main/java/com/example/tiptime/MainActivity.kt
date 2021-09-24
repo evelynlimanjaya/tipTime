@@ -1,8 +1,15 @@
 package com.example.tiptime
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.example.tiptime.databinding.ActivityMainBinding
+import com.google.android.material.snackbar.BaseTransientBottomBar.LENGTH_INDEFINITE
+import com.google.android.material.snackbar.BaseTransientBottomBar.LENGTH_LONG
+import com.google.android.material.snackbar.Snackbar
 import java.text.NumberFormat
 import kotlin.math.ceil
 
@@ -21,6 +28,10 @@ class MainActivity : AppCompatActivity() {
 
             if(cost == null){
                 binding.tipResult.text = ""
+                val emptyCostSnackbar = Snackbar
+                    .make(binding.root,getString(R.string.snackbar), LENGTH_INDEFINITE)
+                    .setAction("Retry") {}
+                emptyCostSnackbar.show()
                 return
             }
 
